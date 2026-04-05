@@ -2,8 +2,6 @@
 
 A minimalist, typography-focused Hugo theme. Originally created for [Bear Blog](https://bearblog.dev), then ported to Hugo.
 
----
-
 ## Screenshots
 
 ![Home](screenshots/home.png)
@@ -13,8 +11,6 @@ A minimalist, typography-focused Hugo theme. Originally created for [Bear Blog](
 ![Post footer](screenshots/post-footer.png)
 ![Tables](screenshots/tables.png)
 ![Dark mode](screenshots/dark.png)
-
----
 
 ## Features
 
@@ -28,8 +24,6 @@ A minimalist, typography-focused Hugo theme. Originally created for [Bear Blog](
 - `{{< posts >}}` shortcode
 - 404 page with post suggestions
 - Print stylesheet
-
----
 
 ## Installation
 
@@ -49,13 +43,9 @@ git submodule add https://github.com/kazimieras-mi/hugo-claritas-theme themes/cl
 
 Set `theme = "claritas"` in your `hugo.toml`. See `exampleSite/` for a working configuration.
 
----
-
 ## Content Structure
 
 Posts go in `content/posts/`. The `{{< posts >}}` shortcode renders a dated list of all posts and can be placed anywhere — e.g. on the home page.
-
----
 
 ## Syntax Highlighting
 
@@ -73,8 +63,6 @@ Without this, Hugo defaults to inline styles and the file has no effect. To rege
 hugo gen chromastyles --style=monokai > assets/syntax.css
 ```
 
----
-
 ## Image Classes
 
 | Class | Effect |
@@ -83,7 +71,7 @@ hugo gen chromastyles --style=monokai > assets/syntax.css
 | `tiny-image` | Tiny image |
 | `inverting` | Inverts colors in dark mode |
 
----
+Generally, you'll need to use the HTML <img> tag for this, and that will be possible if you enable raw HTML in Hugo.
 
 ## Headless Table Trick
 
@@ -95,13 +83,9 @@ Empty header cells are hidden entirely, enabling headerless tables:
 |Cell A|Cell B|Cell C|
 ```
 
----
-
 ## Requirements
 
 Hugo 0.146.0+
-
----
 
 ## License
 
