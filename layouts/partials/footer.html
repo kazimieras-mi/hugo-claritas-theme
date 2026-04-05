@@ -1,0 +1,15 @@
+</main>
+
+<footer>
+	<hr/>
+	{{ $pages := site.RegularPages }}
+	{{ if gt (len $pages) 0 }}
+	{{ $first := index ($pages.ByDate) 0 }}
+	<p>&copy;{{ $first.Date.Format "2006" }} – {{ now.Format "2006" }} {{ .Site.Title }}</p>
+	{{ else }}
+	<p>&copy;{{ now.Format "2006" }} {{ .Site.Title }}</p>
+	{{ end }}
+</footer>
+
+</body>
+</html>

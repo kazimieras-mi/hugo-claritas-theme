@@ -1,0 +1,8 @@
+﻿<ul class="blog-posts">
+    {{ range where .Site.RegularPages "Type" "posts" }}
+    <li>
+        <span><time datetime="{{ .Date }}">{{ .Date.Format "2 Jan 2006" }}</time></span>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </li>
+    {{ end }}
+</ul>

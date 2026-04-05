@@ -1,0 +1,27 @@
+baseURL = "https://example.com"
+title = "My Site"
+theme = "claritas"
+
+[params]
+  # favicon = "/favicon.webp"
+
+[menus]
+  [[menus.main]]
+    name = "Home"
+    url = "/"
+    weight = 10
+
+  [[menus.main]]
+    name = "Posts"
+    pageRef = "/posts"
+    weight = 20
+
+  [[menus.main]]
+    name = "About"
+    url = "/about"
+    weight = 30
+
+[module]
+  [module.hugoVersion]
+    extended = false
+    min = "0.146.0"

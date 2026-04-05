@@ -1,0 +1,25 @@
+{{ partial "header.html" . }}
+
+<h1>{{ .Title }}</h1>
+
+{{ .Content }}
+
+<ul class="blog-posts">
+    {{ range .Pages }}
+    <li>
+        {{ if ne $.Kind "term" }}{{/* hide dates on /tags/<tag>/ etc. */}}
+        {{ with .Date }}
+        <span>
+            <time datetime="{{ . }}">{{ .Format "2 Jan 2006" }}</time>
+        </span>
+        {{ end }}
+        {{ end }}
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        {{ with .Description }}
+        <p><i>{{ . }}</i></p>
+        {{ end }}
+    </li>
+    {{ end }}
+</ul>
+
+{{ partial "footer.html" . }}
